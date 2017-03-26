@@ -1,0 +1,89 @@
+﻿@using CVGS.Models;
+
+@model IEnumerable<CVGS.ViewModels.Event>
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "List of Events";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (account != null && account.roleCode == "employee")
+{
+    <p>
+        @Html.ActionLink("Create Event", "Create")
+    </p>
+}
+
+<table class="table">
+    <tr>
+        @if (account != null)
+        {
+            <th></th>
+        }
+        <th>
+            Event Name
+        </th>
+        <th>
+            Start Date
+        </th>
+        <th>
+            End Date
+        </th>
+        <th>
+            Registration Fee
+        </th>
+        @if (account != null)
+        {
+            <th></th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @if (account != null)
+            {
+                <td>
+                    @if (!item.isJoined)
+                    {
+                        @Html.ActionLink("Join", "Join", new { id = item.eventId })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Unjoin", "Unjoin", new { id = item.eventId })
+                    }
+                </td>
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.startDate, "{0:MM/dd/yyyy hh:mm tt}")
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.endDate, "{0:MM/dd/yyyy hh:mm tt}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.regFee)
+            </td>
+            @if (account != null)
+            {
+                <td>
+                    @if (account.roleCode == "employee")
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.eventId })  <span>|</span>
+                    }
+                    @Html.ActionLink("Details", "Details", new { id = item.eventId })
+                    @if (account.roleCode == "employee")
+                    {
+                        <span>|</span> @Html.ActionLink("Delete", "Delete", new { id = item.eventId })
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>

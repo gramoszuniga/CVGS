@@ -1,0 +1,365 @@
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\csc.exe
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\vbc.exe
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\CVGS.dll.config
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\CVGS.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\CVGS.pdb
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Antlr3.Runtime.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\EntityFramework.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\EntityFramework.SqlServer.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Newtonsoft.Json.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Helpers.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Mvc.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Optimization.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Razor.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.WebPages.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\WebGrease.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\EntityFramework.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\EntityFramework.SqlServer.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Helpers.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Mvc.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Optimization.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.Razor.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.WebPages.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Antlr3.Runtime.pdb
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\Newtonsoft.Json.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\obj\Debug\CVGS.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\obj\Debug\CVGS.pdb
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\csc.exe
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\csc.exe.config
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\csc.rsp
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\csi.exe
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\csi.rsp
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\System.AppContext.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\vbc.exe
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\vbc.exe.config
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\vbc.rsp
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\CVGS.dll.config
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\CVGS.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\CVGS.pdb
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Antlr3.Runtime.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\EntityFramework.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\EntityFramework.SqlServer.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Newtonsoft.Json.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Helpers.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Mvc.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Optimization.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Razor.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.WebPages.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\WebGrease.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Antlr3.Runtime.pdb
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\EntityFramework.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\EntityFramework.SqlServer.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\Newtonsoft.Json.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Helpers.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Mvc.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Optimization.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.Razor.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.WebPages.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\obj\Debug\CVGS.dll
+C:\Users\Einfari\Desktop\Term 3\Microsoft Enterprise Applications\Deliverables\4 - Implementation\CVGS\CVGS\obj\Debug\CVGS.pdb
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csc.exe
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csc.exe.config
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csc.rsp
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csi.exe
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csi.rsp
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CSharp.Core.targets
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.AppContext.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.Collections.Immutable.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.Diagnostics.StackTrace.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.Reflection.Metadata.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\vbc.exe
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\vbc.exe.config
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\vbc.rsp
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe.config
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\CVGS.dll.config
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\CVGS.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\CVGS.pdb
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Antlr3.Runtime.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.SqlServer.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Microsoft.Web.Infrastructure.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Newtonsoft.Json.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Helpers.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Mvc.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Optimization.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Razor.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Deployment.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Razor.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\WebGrease.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Antlr3.Runtime.pdb
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.SqlServer.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Newtonsoft.Json.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Helpers.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Mvc.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Optimization.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Razor.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Deployment.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Razor.xml
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\obj\Debug\CVGS.dll
+I:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\obj\Debug\CVGS.pdb
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\csc.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\csc.exe.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\csc.rsp
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\csi.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\csi.rsp
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\System.AppContext.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\vbc.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\vbc.exe.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\vbc.rsp
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\CVGS.dll.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\CVGS.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\CVGS.pdb
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Antlr3.Runtime.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\EntityFramework.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\EntityFramework.SqlServer.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Newtonsoft.Json.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Helpers.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Mvc.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Optimization.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Razor.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.WebPages.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\WebGrease.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Antlr3.Runtime.pdb
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\EntityFramework.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\EntityFramework.SqlServer.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\Newtonsoft.Json.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Helpers.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Mvc.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Optimization.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.Razor.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.WebPages.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\obj\Debug\CVGS.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\obj\Debug\CVGS.pdb
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\csc.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\csc.exe.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\csc.rsp
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\csi.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\csi.rsp
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\System.AppContext.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\vbc.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\vbc.exe.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\vbc.rsp
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\CVGS.dll.config
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\CVGS.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\CVGS.pdb
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Antlr3.Runtime.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\EntityFramework.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\EntityFramework.SqlServer.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\ExpressiveAnnotations.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Newtonsoft.Json.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Helpers.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Mvc.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Optimization.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Razor.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.WebPages.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\WebGrease.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Antlr3.Runtime.pdb
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\EntityFramework.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\EntityFramework.SqlServer.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\ExpressiveAnnotations.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\Newtonsoft.Json.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Helpers.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Mvc.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Optimization.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.Razor.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.WebPages.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\obj\Debug\CVGS.dll
+C:\Users\Gramoszuniga5711\Desktop\CVGS Copy\CVGS\obj\Debug\CVGS.pdb
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\csc.exe.config
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\csc.rsp
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\csi.exe
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\csi.rsp
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\System.AppContext.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\vbc.exe.config
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\roslyn\vbc.rsp
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.dll
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.xml
+C:\Users\Einfari\Desktop\CVGS\CVGS\obj\Debug\CVGS.csprojResolveAssemblyReference.cache
+C:\Users\Gramoszuniga5711\Desktop\CVGS\CVGS\obj\Debug\CVGS.csprojResolveAssemblyReference.cache
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csc.exe
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csc.exe.config
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csc.rsp
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csi.exe
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\csi.rsp
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.AppContext.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.Collections.Immutable.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\System.Reflection.Metadata.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\vbc.exe
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\vbc.exe.config
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\vbc.rsp
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\roslyn\VBCSCompiler.exe.config
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\CVGS.dll.config
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\CVGS.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\CVGS.pdb
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Antlr3.Runtime.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.SqlServer.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Microsoft.Web.Infrastructure.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Newtonsoft.Json.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Helpers.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Mvc.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Optimization.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Razor.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Deployment.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Razor.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\WebGrease.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Antlr3.Runtime.pdb
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\EntityFramework.SqlServer.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\ExpressiveAnnotations.MvcUnobtrusive.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\Newtonsoft.Json.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Helpers.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Mvc.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Optimization.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.Razor.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Deployment.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\bin\System.Web.WebPages.Razor.xml
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\obj\Debug\CVGS.csprojResolveAssemblyReference.cache
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\obj\Debug\CVGS.dll
+E:\Microsoft Enterprise\Deliverables\Implementation\CVGS\CVGS\obj\Debug\CVGS.pdb

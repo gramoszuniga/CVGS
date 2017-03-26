@@ -1,0 +1,160 @@
+﻿@model CVGS.ViewModels.Profile
+
+@{
+    ViewBag.Title = "Order Summary";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Subtotal
+        </dt>
+
+        <dd>
+            @(ViewBag.subTotal.ToString("C2"))
+        </dd>
+
+        <dt>
+            Shipping
+        </dt>
+
+        <dd>
+            @(ViewBag.shipping.ToString("C2"))
+        </dd>
+
+        <dt>
+            Tax
+        </dt>
+
+        <dd>
+            @(ViewBag.tax.ToString("C2"))
+        </dd>
+
+        <dt>
+            Grand Total
+        </dt>
+
+        <dd>
+            @(ViewBag.grandTotal.ToString("C2"))
+        </dd>
+        <hr />
+        <dt>
+            @Html.DisplayNameFor(model => model.number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CVV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CVV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creditCardType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creditCardType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expDate)
+        </dd>
+        <hr />
+        </dl>
+    <dl class="dl-horizontal">
+        <div class="col-md-6">
+            <dt>
+                @Html.DisplayNameFor(model => model.billStreet)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.billStreet)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.billCity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.billCity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.billPostalCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.billPostalCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.billProvinceCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.billProvinceCode)
+            </dd>
+            <hr />
+        </div>
+        <div class="col-md-6">
+            <dt>
+                @Html.DisplayNameFor(model => model.shipStreet)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.shipStreet)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.shipCity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.shipCity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.shipPostalCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.shipPostalCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.shipProvinceCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.shipProvinceCode)
+            </dd>
+            <hr />
+            </div>
+            <dt></dt>
+            <dd>
+                @Html.ActionLink("Submit Order", "Add", "Orders") |
+                @Html.ActionLink("Return to Cart", "", "Cart")
+            </dd>
+</dl>
+</div>

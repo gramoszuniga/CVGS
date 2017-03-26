@@ -1,0 +1,335 @@
+﻿@using CVGS.Models;
+@{
+    var account = Session["account"] as Account;
+}
+
+@model CVGS.ViewModels.Profile
+
+@{
+    ViewBag.Title = "Edit Profile for " + Model.fName + " " + Model.lName;
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.fName)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.fName, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.fName, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.mName)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.mName, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.mName, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.lName)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.lName, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.lName, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.userName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.userName)
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ActionLink("Change Password", "", "ChangePassword")
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.dob)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.dob, new { htmlAttributes = new { @class = "form-control date" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.dob, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.gender)
+                </dt>
+                <dd>
+                    @Html.DropDownList("gender", (SelectList)ViewBag.genders, htmlAttributes: new { @class = "form-control" })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.gender, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.phone)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.phone, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.phone, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.email)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.acceptEmails)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.acceptEmails)
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.acceptEmails, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+        </div>
+
+        <div class="col-md-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.number)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.number, new { htmlAttributes = new { @class = "form-control", type = "number" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.number, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.CVV)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.CVV, new { htmlAttributes = new { @class = "form-control", type = "number" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.CVV, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.name)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.expDate)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.expDate, new { htmlAttributes = new { @class = "form-control expDate" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.expDate, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.creditCardType)
+                </dt>
+                <dd>
+                    @Html.DropDownList("creditCardType", (SelectList)ViewBag.creditCardTypes, htmlAttributes: new { @class = "form-control" })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.creditCardType, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.shipStreet)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.shipStreet, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.shipStreet, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.shipCity)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.shipCity, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.shipCity, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.shipPostalCode)
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.shipPostalCode, new { htmlAttributes = new { @class = "form-control" } })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.shipPostalCode, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.LabelFor(model => model.shipProvinceCode)
+                </dt>
+                <dd>
+                    @Html.DropDownList("shipProvinceCode", null, htmlAttributes: new { @class = "form-control" })
+                </dd>
+                <dt></dt>
+                <dd>
+                    @Html.ValidationMessageFor(model => model.shipProvinceCode, "", new { @class = "text-danger" })
+                </dd>
+            </dl>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.Label("Billing Same as Shipping?")
+                </dt>
+                <dd>
+                    <input type="checkbox" id="chkEditBillingAddress" />
+                </dd>
+            </dl>
+
+            <div id="chkEditBilling">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.LabelFor(model => model.billStreet)
+                    </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.billStreet, new { htmlAttributes = new { @class = "form-control" } })
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                        @Html.ValidationMessageFor(model => model.billStreet, "", new { @class = "text-danger" })
+                    </dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.LabelFor(model => model.billCity)
+                    </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.billCity, new { htmlAttributes = new { @class = "form-control" } })
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                        @Html.ValidationMessageFor(model => model.billCity, "", new { @class = "text-danger" })
+                    </dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.LabelFor(model => model.billPostalCode)
+                    </dt>
+                    <dd>
+                        @Html.EditorFor(model => model.billPostalCode, new { htmlAttributes = new { @class = "form-control" } })
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                        @Html.ValidationMessageFor(model => model.billPostalCode, "", new { @class = "text-danger" })
+                    </dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.LabelFor(model => model.billProvinceCode)
+                    </dt>
+                    <dd>
+                        @Html.DropDownList("billProvinceCode", null, htmlAttributes: new { @class = "form-control" })
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                        @Html.ValidationMessageFor(model => model.billProvinceCode, "", new { @class = "text-danger" })
+                    </dd>
+                </dl>
+            </div>
+
+            <dl class="dl-horizontal">
+                <dt></dt>
+                <dd>
+                    <input type="submit" value="Save" class="btn btn-default" onclick="SubmitEditAddress()" /> <span class="text-danger">@TempData["errMsg"]</span>
+                    <p class="btn btn-default">@Html.ActionLink("Return to Profile", "", "Profile", new { userName = account.userName }, null)</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

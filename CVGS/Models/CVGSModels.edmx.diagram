@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f3669e3dad264ec89c331f65d3a09393" Name="Diagram1">
+        <EntityTypeShape EntityType="CVGSModel.Account" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.Address" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.CreditCard" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.Event" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.Game" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.Person" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.PersonAddress" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.PersonEvent" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.Province" Width="1.5" PointX="1.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVGSModel.Role" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="CVGSModel.FKAccount188532" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKAccount300931" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKAddress356431" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKPersonAddr442952" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKCreditCard118197" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKEvent184491" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKPersonEven329650" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKPersonAddr841306" ManuallyRouted="false" />
+        <AssociationConnector Association="CVGSModel.FKPersonEven815614" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CVGSModel.FriendList" Width="1.5" PointX="3" PointY="16.125" />
+        <AssociationConnector Association="CVGSModel.FKFriendList782661" />
+        <AssociationConnector Association="CVGSModel.FKFriendList967807" />
+        <EntityTypeShape EntityType="CVGSModel.Genre" Width="1.5" PointX="5.75" PointY="16.625" />
+        <EntityTypeShape EntityType="CVGSModel.PersonGenre" Width="1.5" PointX="8" PointY="10.375" />
+        <EntityTypeShape EntityType="CVGSModel.PersonPlatform" Width="1.5" PointX="6" PointY="13.375" />
+        <EntityTypeShape EntityType="CVGSModel.Platform" Width="1.5" PointX="3.75" PointY="19.625" />
+        <AssociationConnector Association="CVGSModel.FKPersonGenr132513" />
+        <AssociationConnector Association="CVGSModel.FKPersonGenr164969" />
+        <AssociationConnector Association="CVGSModel.FKPersonPlat217814" />
+        <AssociationConnector Association="CVGSModel.FKPersonPlat206424" />
+        <EntityTypeShape EntityType="CVGSModel.GameDetail" Width="1.5" PointX="8" PointY="2.5" />
+        <EntityTypeShape EntityType="CVGSModel.GameGenre" Width="1.5" PointX="11" PointY="9.125" />
+        <EntityTypeShape EntityType="CVGSModel.GamePlatform" Width="1.5" PointX="9" PointY="13.625" />
+        <EntityTypeShape EntityType="CVGSModel.PersonGame" Width="1.5" PointX="9" PointY="6" />
+        <AssociationConnector Association="CVGSModel.FKGameDetail308055" />
+        <AssociationConnector Association="CVGSModel.FKGameGenre255067" />
+        <AssociationConnector Association="CVGSModel.FKGamePlatfo27557" />
+        <AssociationConnector Association="CVGSModel.FKPersonGame479066" />
+        <AssociationConnector Association="CVGSModel.FKGameGenre697924" />
+        <AssociationConnector Association="CVGSModel.FKGamePlatfo724172" />
+        <AssociationConnector Association="CVGSModel.FKPersonGame219406" />
+        <EntityTypeShape EntityType="CVGSModel.Review" Width="1.5" PointX="14" PointY="5.75" />
+        <EntityTypeShape EntityType="CVGSModel.Wishlist" Width="1.5" PointX="11" PointY="3.125" />
+        <AssociationConnector Association="CVGSModel.FKReview775831" />
+        <AssociationConnector Association="CVGSModel.FKWishlist709959" />
+        <AssociationConnector Association="CVGSModel.FKReview964507" />
+        <AssociationConnector Association="CVGSModel.FKWishlist521291" />
+        <EntityTypeShape EntityType="CVGSModel.Cart" Width="1.5" PointX="3" PointY="22.75" />
+        <EntityTypeShape EntityType="CVGSModel.CartDetail" Width="1.5" PointX="11.25" PointY="12.5" />
+        <AssociationConnector Association="CVGSModel.FKCart430566" />
+        <AssociationConnector Association="CVGSModel.FKCartDetail230590" />
+        <AssociationConnector Association="CVGSModel.FKCartDetail61725" />
+        <EntityTypeShape EntityType="CVGSModel.Order" Width="1.5" PointX="3" PointY="25.625" />
+        <EntityTypeShape EntityType="CVGSModel.OrderDetail" Width="1.5" PointX="11.25" PointY="16" />
+        <AssociationConnector Association="CVGSModel.FKOrderDetai855206" />
+        <AssociationConnector Association="CVGSModel.FKOrder69678" />
+        <AssociationConnector Association="CVGSModel.FKOrderDetai440612" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

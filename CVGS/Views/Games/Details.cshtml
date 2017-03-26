@@ -1,0 +1,108 @@
+﻿@using CVGS.Models
+
+@model CVGS.ViewModels.GameAndGameDetails
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "Details for " + Model.title;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    @if (account != null && account.roleCode == "employee")
+    {
+        @Html.ActionLink("Edit Game", "Edit", new { id = Model.gameId }) <span>|</span>
+        @Html.ActionLink("Delete Game", "Delete", new { id = Model.gameId }) <span>|</span>
+    }
+    @if (account != null)
+    {
+        @Html.ActionLink("Add to Cart", "Add", "Cart", new { id = Model.gameDetailId }, null) <span>|</span>
+        @Html.ActionLink("Add to Wish List", "Add", "WishList", new { id = Model.gameId }, null) <span>|</span>
+        @Html.ActionLink("Add Review", "Add", "Reviews", new { id = Model.gameId }, null) <span>|</span>
+    }
+    @Html.ActionLink("Back to Games", "Index")
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.platformCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.platformCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genreCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genreCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.publisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.relDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.relDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rateAVG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rateAVG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc)
+        </dd>
+    </dl>
+</div>
+<div>
+    <h4>What Other Gamers Have to Say...</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in Model.Reviews)
+        {
+            <dt>
+                @Html.DisplayFor(modelItem => item.Person.Account.userName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.revComment)
+            </dd>
+        }
+    </dl>
+</div>

@@ -1,0 +1,110 @@
+﻿@using CVGS.Models
+
+@model IEnumerable<CVGS.ViewModels.CartViewModel>
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "Shopping Cart for " + account.Person.fName + " " + account.Person.lName;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<dl class="dl-horizontal">
+    <dt></dt>
+    <dd>
+        <span class="text-danger">@TempData["infoMsg"]</span>
+    </dd>
+</dl>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemTotal)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.ActionLink(" ", "SubQuantity", new { id = item.cartDetailId }, new { @class = "glyphicon glyphicon-minus" })
+                @Html.DisplayFor(modelItem => item.quantity)
+                @Html.ActionLink(" ", "AddQuantity", new { id = item.cartDetailId }, new { @class = "glyphicon glyphicon-plus" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.itemTotal)
+            </td>
+            <td>
+                @Html.ActionLink(" ", "Remove", new { id = item.cartDetailId }, new { @class = "glyphicon glyphicon-remove-circle" })
+            </td>
+        </tr>
+    }
+
+    @if (account != null && account.roleCode == "employee")
+    {
+        <tr>
+            <td>
+                <b>Employee Discount</b>
+            </td>
+            <td>
+                <b>Percent Amount</b>
+            </td>
+            <td></td>
+            <td>
+                <b>Discount Amount</b>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                @ViewBag.disPct
+            </td>
+            <td></td>
+            <td>
+                @(ViewBag.disAmount.ToString("C2"))
+            </td>
+            <td></td>
+        </tr>
+    }
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <b>Cart Subtotal</b>
+        </td>
+        <td>
+            @if (Model.Count() > 0)
+            {
+                <p class="btn btn-default">@Html.ActionLink("Checkout", "", "Checkout")</p> <span>|</span>
+            }
+            <p class="btn btn-default">@Html.ActionLink("Empty Cart", "Empty")</p>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>@(ViewBag.total.ToString("C2"))</td>
+        <td></td>
+    </tr>
+</table>

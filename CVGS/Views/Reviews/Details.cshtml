@@ -1,0 +1,33 @@
+﻿@model CVGS.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Review for @Model.Game.title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Review Rating
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rating)
+        </dd>
+
+        <dt>
+            Review Comment
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.revComment)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <span class="text-danger">Review sent for approval.</span> |
+    @Html.ActionLink("Back to Game Detail", "Details", "Games", new { id = Model.gameId }, null)
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CVGS.Models.Account>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loginAttempts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isLocked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.fName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.roleCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.userName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loginAttempts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isLocked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.fName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role.roleCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.personId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.personId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.personId })
+        </td>
+    </tr>
+}
+
+</table>

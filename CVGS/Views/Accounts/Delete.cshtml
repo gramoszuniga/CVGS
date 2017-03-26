@@ -1,0 +1,72 @@
+﻿@model CVGS.Models.Account
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.loginAttempts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loginAttempts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isLocked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isLocked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.fName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.fName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Role.roleCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role.roleCode)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

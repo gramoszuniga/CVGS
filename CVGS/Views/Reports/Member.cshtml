@@ -1,0 +1,100 @@
+﻿@model CVGS.Models.Person
+
+@{
+    ViewBag.Title = "Member Report for " + Model.Account.userName;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            User Name
+        </th>
+        <th>
+            Full Name
+        </th>
+        <th>
+            Date of Birth
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            E-Mail
+        </th>
+        <th>
+            Registration Date
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.personId)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Account.userName)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.fName) @Html.DisplayFor(model => model.lName)
+        </td>
+        <td>
+            @Html.ValueFor(model => model.dob, "{0:MM/dd/yyyy}")
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.email)
+        </td>
+        <td>
+            @Html.ValueFor(model => model.regDate, "{0:MM/dd/yyyy}")
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            Mailing Address
+        </th>
+        <th>
+            Shipping Address
+        </th>
+        <th>
+            Genres
+        </th>
+        <th>
+            Friends
+        </th>
+        <th>
+            Downloads
+        </th>
+        <th>
+            Buys
+        </th>
+    </tr>
+    <tr>
+        <td>@ViewBag.billAddress</td>
+        <td>@ViewBag.shipAddress</td>
+        <td>
+            @Html.DisplayFor(model => model.PersonGenres.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.FriendLists1.Count)
+        </td>
+        <td>
+            @ViewBag.downloads
+        </td>
+        <td>
+            @ViewBag.buys
+        </td>
+    </tr>
+</table>

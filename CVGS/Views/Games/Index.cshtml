@@ -1,0 +1,101 @@
+﻿@using CVGS.Models;
+
+@model IEnumerable<CVGS.ViewModels.GameAndGameDetails>
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "List of Games";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    <div class="row">
+        <div class="col-md-6">
+            @if (account != null && account.roleCode == "employee")
+            {
+                @Html.ActionLink("Add New Game", "Create")
+            }
+        </div>
+        <div class="col-md-6 text-right">
+            @using (Html.BeginForm())
+            {
+                <div class="form-inline">
+                    <div class="form-group">
+                        @Html.TextBox("SearchString", "", new { @class = "form-control", placeholder = "Search..." })
+                        <input type="submit" value="Filter" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Game Title
+        </th>
+        <th>
+            Platform
+        </th>
+        <th>
+            Genre Code
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.platformCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genreCode)
+            </td>
+            <td>
+                @if (item.phyCopy)
+                {
+                    <span>Physical and downloadable copies.</span>
+                }
+                else
+                {
+                    <span>Downloadable copy only.</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @if (account != null)
+                {
+                    @Html.ActionLink("Add to Cart", "Add", "Cart", new { id = item.gameDetailId }, null)  <span>|</span>
+                }
+                @if (account != null && account.roleCode == "employee")
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.gameDetailId })  <span>|</span>
+                }
+                @if (account != null)
+                {
+                    @Html.ActionLink("Details", "Details", new { id = item.gameDetailId })
+                }
+                @if (account != null && account.roleCode == "employee")
+                {
+                    <span>|</span> @Html.ActionLink("Delete", "Delete", new { id = item.gameDetailId })
+                }
+            </td>
+        </tr>
+    }
+</table>

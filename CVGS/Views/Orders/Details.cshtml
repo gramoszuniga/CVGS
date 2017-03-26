@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CVGS.Models.OrderDetail>
+
+@{
+    ViewBag.Title = "Details for Order";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Game Title
+        </th>
+        <th>
+            Game Type
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameDetail.Game.title)
+            </td>
+            <td>
+                @if (item.GameDetail.phyCopy)
+                {
+                    <span>Physical and downloadable copies.</span>
+                }
+                else
+                {
+                    <span>Downloadable copy only.</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.uPrice)
+            </td>
+        </tr>
+    }
+
+</table>    

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CVGS.Models.Review>
+
+@{
+    ViewBag.Title = "List of Reviews";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Game Title
+        </th>
+        <th>
+            Username
+        </th>
+        <th>
+            Review Date
+        </th>
+        <th>
+            Rating
+        </th>
+        <th>
+            Review Comment
+        </th>
+        <th>
+            Review Status
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Game.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.Account.userName)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.revDate, "{0:MM/dd/yyyy}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.revComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.ActionLink("Update Status", "UpdateStatus", new { id = item.reviewId })
+            </td>
+        </tr>
+    }
+
+</table>

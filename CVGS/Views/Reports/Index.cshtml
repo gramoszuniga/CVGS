@@ -1,0 +1,65 @@
+﻿@using CVGS.Models;
+@{
+    ViewBag.Title = "List of Reports";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<hr />
+<table align="center">
+    @using (Html.BeginForm("Games", "Reports"))
+    {
+        <tr>
+            <th style="padding:5px;">Game List Report</th>
+            <td style="padding:5px;"><input type="submit" value="View Report" class="btn btn-default" /></td>            
+        </tr>
+    }
+    @using (Html.BeginForm("Game", "Reports"))
+    {
+        <tr>
+            <th rowspan="2" style="padding:5px;">Game Detail Report</th>
+            <td style="padding:5px;">@Html.DropDownList("gameId", (SelectList)ViewBag.games, htmlAttributes: new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td style="padding:5px;"><input type="submit" value="View Report" class="btn btn-default" /></td>
+        </tr>
+    }
+    @using (Html.BeginForm("Members", "Reports"))
+    {
+        <tr>
+            <th style="padding:5px;">Member List Report</th>
+            <td style="padding:5px;"><input type="submit" value="View Report" class="btn btn-default" /></td>
+        </tr>
+    }
+    @using (Html.BeginForm("Member", "Reports"))
+    {
+        <tr>
+            <th rowspan="2" style="padding:5px;">Member Detail Report</th>
+            <td style="padding:5px;">@Html.DropDownList("personId", (SelectList)ViewBag.people, htmlAttributes: new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td style="padding:5px;"><input type="submit" value="View Report" class="btn btn-default" /></td>
+        </tr>
+    }
+    @using (Html.BeginForm("WishList", "Reports"))
+    {
+        <tr>
+            <th rowspan="2" style="padding:5px;">Wish List Report</th>
+            <td style="padding:5px;">@Html.DropDownList("personId", (SelectList)ViewBag.people, htmlAttributes: new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td style="padding:5px;"><input type="submit" value="View Report" class="btn btn-default" /></td>
+        </tr>
+    }
+    @using (Html.BeginForm("Sales", "Reports"))
+    {
+        <tr>
+            <th style="padding:5px;">Sales Report</th>
+            <td style="padding:5px;"><input type="submit" value="View Report" class="btn btn-default" /></td>
+        </tr>
+    }
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,55 @@
+﻿@using CVGS.Models;
+
+@model IEnumerable<CVGS.Models.Order>
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "List of Orders";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Username
+        </th>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Order Status
+        </th>
+        <th>
+            Order Total
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.Account.userName)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.ordDate, "{0:MM/dd/yyyy}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+            <td>
+                @if (account != null && account.roleCode == "employee")
+                {
+                    @Html.ActionLink("Update Status", "UpdateStatus", new { id = item.orderId }) <span>|</span>
+                }
+                @Html.ActionLink("Details", "Details", new { id = item.orderId })
+            </td>
+        </tr>
+    }
+</table>

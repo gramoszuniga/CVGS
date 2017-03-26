@@ -1,0 +1,33 @@
+﻿@using CVGS.Models;
+
+@model IEnumerable<CVGS.ViewModels.GameAndGameDetails>
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "Games Purchased by " +  account.userName;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Game Title
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.ActionLink("Download", "Download")
+            </td>
+        </tr>
+    }
+</table>

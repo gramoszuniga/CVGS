@@ -1,0 +1,121 @@
+﻿@using CVGS.Models;
+@model Person
+@{
+    Account account = Session["account"] as Account;
+}
+
+@{
+    ViewBag.Title = "Profile of " + Model.Account.Person.fName + " " + Model.Account.Person.lName;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <p>
+        @if (account.personId == Model.personId)
+        {
+            @Html.ActionLink("Edit Profile", "Edit", "Profile") <span>|</span> @Html.ActionLink("My Games", "MyGames", "Games")
+        }
+    </p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Username
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Account.userName)
+        </dd>
+
+        <dt>
+            Full Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fName).ToString() @Html.DisplayFor(model => model.lName).ToString()
+        </dd>
+
+        <dt>
+            Gender
+        </dt>
+
+        @if (Html.DisplayFor(model => model.gender).ToString() == "m")
+        {
+            <dd>Male</dd>
+        }
+        else
+        {
+            <dd>Female</dd>
+        }
+
+        @if (Model.Account.roleCode == "member")
+        {
+            <dd>
+                Member since @Html.ValueFor(model => model.regDate, "{0:MM/dd/yyyy}")
+            </dd>
+        }
+        else
+        {
+            <dd>
+                Employee since @Html.ValueFor(model => model.regDate, "{0:MM/dd/yyyy}")
+            </dd>
+        }
+        @if (account.personId != Model.personId)
+        {
+            <dt></dt>
+            <dd>
+                @if (!ViewBag.isFriend)
+                {
+                    @Html.ActionLink("Add as Friend", "Befriend", new { id = Model.personId })
+                }
+                else
+                {
+                    @Html.ActionLink("Remove Friend", "Unfriend", new { id = Model.personId }) <br />
+                    @Html.ActionLink("See Wish List", "", "WishList", new { userName = Model.Account.userName }, null)
+                }
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <h4>Friends</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in Model.FriendLists1)
+        {
+            <dd>
+                @Html.ActionLink(item.Person.Account.userName, "", "Profile", new { userName = item.Person.Account.userName }, null)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <h4>Favourite Platforms</h4>
+    <p>
+        @Html.ActionLink("Edit", "", "Platforms")
+    </p>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in Model.PersonPlatforms)
+        {
+            <dd>
+                @Html.DisplayFor(modelItem => item.platformCode)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <h4>Favourite Genres</h4>
+    <p>
+        @Html.ActionLink("Edit", "", "Genres")
+    </p>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in Model.PersonGenres)
+        {
+            <dd>
+                @Html.DisplayFor(modelItem => item.genreCode)
+            </dd>
+        }
+    </dl>
+</div>

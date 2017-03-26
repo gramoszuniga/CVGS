@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CVGS.Models.Address>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Province.provinceCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Province.provinceCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.addressId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.addressId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.addressId })
+        </td>
+    </tr>
+}
+
+</table>

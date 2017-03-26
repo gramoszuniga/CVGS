@@ -1,0 +1,35 @@
+﻿@using CVGS.Models;
+@{
+    var account = Session["account"] as Account;
+}
+
+@model CVGS.ViewModels.Profile
+
+@{
+    ViewBag.Title = "Welcome to CVGS Insiders Club";
+}
+
+<div class="jumbotron" style="text-align:center;">
+    @if (account != null)
+    {
+        <h1>Welcome, @account.Person.fName @account.Person.lName</h1>
+    }
+    @if (account == null)
+    {
+        <h1>@ViewBag.Title</h1>
+    }
+</div>
+
+<div>
+    <p class="lead">
+        CVGS is an online Insiders Club to buy games and join events. Please register for a FREE account to access exclusive content
+        like buying games, joining events, creating a profile, and more.
+    </p>
+</div>
+
+<div>
+    <p id="conestogaImage">
+        <img src="~/Images/Conestoga_Logo.PNG" width="242" height="287" />&nbsp;<br />
+        <b>Est. 2016</b>
+    </p>
+</div>

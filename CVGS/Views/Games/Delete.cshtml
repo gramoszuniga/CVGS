@@ -1,0 +1,70 @@
+﻿@model CVGS.Models.Game
+
+@{
+    ViewBag.Title = "Delete " + Model.title + "?";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Game Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            Release Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.relDate)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desc)
+        </dd>
+
+        <dt>
+            Cover
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cover)
+        </dd>
+
+        <dt>
+            Publisher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher)
+        </dd>
+
+        <dt>
+            Average Rating
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rateAVG)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to Games", "Index")
+        </div>
+    }
+</div>

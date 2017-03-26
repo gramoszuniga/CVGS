@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CVGS.Models.Order>
+
+@{
+    ViewBag.Title = "Sales Report";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Customer Name
+        </th>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Total
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.orderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.fName) @Html.DisplayFor(modelItem => item.Person.lName)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.ordDate, "{0:MM/dd/yyyy}")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+        </tr>
+    }
+</table>

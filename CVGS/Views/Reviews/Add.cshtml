@@ -1,0 +1,45 @@
+﻿@model CVGS.Models.Review
+
+@{
+    ViewBag.Title = "Add Review for " + ViewBag.title;
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Hidden("gameId", (int)ViewBag.gameId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.rating, "Rating", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("rating", (SelectList)ViewBag.ratings, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.rating, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.revComment, "Review Comment", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.revComment, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.revComment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+                @Html.ActionLink("Back to Game Details", "Details", "Games", new { id = @ViewBag.gameId }, null)
+            </div>
+        </div>
+    </div>
+} 
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

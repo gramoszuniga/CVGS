@@ -1,0 +1,1901 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CVGSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="userName" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="roleCode" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="loginAttempts" Type="int" Nullable="false" />
+          <Property Name="isLocked" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="addressId" />
+          </Key>
+          <Property Name="addressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="street" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="city" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="postalCode" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="provinceCode" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="total" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CartDetail">
+          <Key>
+            <PropertyRef Name="cartDetailId" />
+          </Key>
+          <Property Name="cartDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="gameDetaild" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CreditCard">
+          <Key>
+            <PropertyRef Name="creditCardId" />
+          </Key>
+          <Property Name="creditCardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="number" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="expDate" Type="datetime" Nullable="false" />
+          <Property Name="creditCardType" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CVV" Type="varchar" MaxLength="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="eventId" />
+          </Key>
+          <Property Name="eventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="startDate" Type="datetime" Nullable="false" />
+          <Property Name="endDate" Type="datetime" Nullable="false" />
+          <Property Name="regFee" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="venue" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="notes" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FriendList">
+          <Key>
+            <PropertyRef Name="friendListId" />
+          </Key>
+          <Property Name="friendListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="friendId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="gameId" />
+          </Key>
+          <Property Name="gameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="relDate" Type="datetime" Nullable="false" />
+          <Property Name="desc" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="cover" Type="varchar" MaxLength="100" />
+          <Property Name="publisher" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="rateAVG" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="GameDetail">
+          <Key>
+            <PropertyRef Name="gameDetailId" />
+          </Key>
+          <Property Name="gameDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gameId" Type="int" Nullable="false" />
+          <Property Name="phyCopy" Type="bit" Nullable="false" />
+          <Property Name="price" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="qoh" Type="int" />
+        </EntityType>
+        <EntityType Name="GameGenre">
+          <Key>
+            <PropertyRef Name="gameGenreId" />
+          </Key>
+          <Property Name="gameGenreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gameId" Type="int" Nullable="false" />
+          <Property Name="genreCode" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GamePlatform">
+          <Key>
+            <PropertyRef Name="gamePlatformId" />
+          </Key>
+          <Property Name="gamePlatformId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gameId" Type="int" Nullable="false" />
+          <Property Name="platformCode" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="genreCode" />
+          </Key>
+          <Property Name="genreCode" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="orderId" />
+          </Key>
+          <Property Name="orderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="ordDate" Type="datetime" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="total" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="orderDetailId" />
+          </Key>
+          <Property Name="orderDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="orderId" Type="int" Nullable="false" />
+          <Property Name="gameDetailId" Type="int" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="uPrice" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="mName" Type="varchar" MaxLength="30" />
+          <Property Name="lName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="dob" Type="datetime" Nullable="false" />
+          <Property Name="gender" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="acceptEmails" Type="bit" Nullable="false" />
+          <Property Name="regDate" Type="datetime" Nullable="false" />
+          <Property Name="avatar" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PersonAddress">
+          <Key>
+            <PropertyRef Name="personAddressId" />
+          </Key>
+          <Property Name="personAddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="addressId" Type="int" Nullable="false" />
+          <Property Name="type" Type="varchar" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PersonEvent">
+          <Key>
+            <PropertyRef Name="personEventId" />
+          </Key>
+          <Property Name="personEventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="eventId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PersonGame">
+          <Key>
+            <PropertyRef Name="personGameId" />
+          </Key>
+          <Property Name="personGameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="gameId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PersonGenre">
+          <Key>
+            <PropertyRef Name="personGenreId" />
+          </Key>
+          <Property Name="personGenreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="genreCode" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PersonPlatform">
+          <Key>
+            <PropertyRef Name="personPlatformId" />
+          </Key>
+          <Property Name="personPlatformId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="platformCode" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Platform">
+          <Key>
+            <PropertyRef Name="platformCode" />
+          </Key>
+          <Property Name="platformCode" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Province">
+          <Key>
+            <PropertyRef Name="provinceCode" />
+          </Key>
+          <Property Name="provinceCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="provTax" Type="decimal" Precision="3" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="reviewId" />
+          </Key>
+          <Property Name="reviewId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="gameId" Type="int" Nullable="false" />
+          <Property Name="rating" Type="int" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="revDate" Type="datetime" Nullable="false" />
+          <Property Name="revComment" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="roleCode" />
+          </Key>
+          <Property Name="roleCode" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="disPct" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="Wishlist">
+          <Key>
+            <PropertyRef Name="wishlistId" />
+          </Key>
+          <Property Name="wishlistId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="gameId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FKAccount188532">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKAccount300931">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="roleCode" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="roleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKAddress356431">
+          <End Role="Province" Type="Self.Province" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Province">
+              <PropertyRef Name="provinceCode" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="provinceCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCart430566">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Cart" Type="Self.Cart" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCartDetail230590">
+          <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+          <End Role="CartDetail" Type="Self.CartDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cart">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="CartDetail">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCartDetail61725">
+          <End Role="GameDetail" Type="Self.GameDetail" Multiplicity="1" />
+          <End Role="CartDetail" Type="Self.CartDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GameDetail">
+              <PropertyRef Name="gameDetailId" />
+            </Principal>
+            <Dependent Role="CartDetail">
+              <PropertyRef Name="gameDetaild" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCreditCard118197">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="CreditCard" Type="Self.CreditCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="CreditCard">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKEvent184491">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Event" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Event">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKFriendList782661">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="FriendList" Type="Self.FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="friendId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKFriendList967807">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="FriendList" Type="Self.FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGameDetail308055">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="GameDetail" Type="Self.GameDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="GameDetail">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGameGenre255067">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="GameGenre" Type="Self.GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGameGenre697924">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
+          <End Role="GameGenre" Type="Self.GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="genreCode" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="genreCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGamePlatfo27557">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="GamePlatform" Type="Self.GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGamePlatfo724172">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="1" />
+          <End Role="GamePlatform" Type="Self.GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="platformCode" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="platformCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrder69678">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderDetai440612">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="orderId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="orderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderDetai855206">
+          <End Role="GameDetail" Type="Self.GameDetail" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GameDetail">
+              <PropertyRef Name="gameDetailId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="gameDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonAddr442952">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="PersonAddress" Type="Self.PersonAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="addressId" />
+            </Principal>
+            <Dependent Role="PersonAddress">
+              <PropertyRef Name="addressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonAddr841306">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonAddress" Type="Self.PersonAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonAddress">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonEven329650">
+          <End Role="Event" Type="Self.Event" Multiplicity="1" />
+          <End Role="PersonEvent" Type="Self.PersonEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="eventId" />
+            </Principal>
+            <Dependent Role="PersonEvent">
+              <PropertyRef Name="eventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonEven815614">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonEvent" Type="Self.PersonEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonEvent">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGame219406">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonGame" Type="Self.PersonGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonGame">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGame479066">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="PersonGame" Type="Self.PersonGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="PersonGame">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGenr132513">
+          <End Role="Genre" Type="Self.Genre" Multiplicity="1" />
+          <End Role="PersonGenre" Type="Self.PersonGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="genreCode" />
+            </Principal>
+            <Dependent Role="PersonGenre">
+              <PropertyRef Name="genreCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGenr164969">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonGenre" Type="Self.PersonGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonGenre">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonPlat206424">
+          <End Role="Platform" Type="Self.Platform" Multiplicity="1" />
+          <End Role="PersonPlatform" Type="Self.PersonPlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="platformCode" />
+            </Principal>
+            <Dependent Role="PersonPlatform">
+              <PropertyRef Name="platformCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonPlat217814">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonPlatform" Type="Self.PersonPlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonPlatform">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReview775831">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="Review" Type="Self.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReview964507">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Review" Type="Self.Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWishlist521291">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Wishlist" Type="Self.Wishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Wishlist">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWishlist709959">
+          <End Role="Game" Type="Self.Game" Multiplicity="1" />
+          <End Role="Wishlist" Type="Self.Wishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="Wishlist">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CVGSModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CartDetail" EntityType="Self.CartDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CreditCard" EntityType="Self.CreditCard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Event" EntityType="Self.Event" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FriendList" EntityType="Self.FriendList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameDetail" EntityType="Self.GameDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GameGenre" EntityType="Self.GameGenre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GamePlatform" EntityType="Self.GamePlatform" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Genre" EntityType="Self.Genre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonAddress" EntityType="Self.PersonAddress" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonEvent" EntityType="Self.PersonEvent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonGame" EntityType="Self.PersonGame" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonGenre" EntityType="Self.PersonGenre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonPlatform" EntityType="Self.PersonPlatform" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Platform" EntityType="Self.Platform" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Wishlist" EntityType="Self.Wishlist" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FKAccount188532" Association="Self.FKAccount188532">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FKAccount300931" Association="Self.FKAccount300931">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FKAddress356431" Association="Self.FKAddress356431">
+            <End Role="Province" EntitySet="Province" />
+            <End Role="Address" EntitySet="Address" />
+          </AssociationSet>
+          <AssociationSet Name="FKCart430566" Association="Self.FKCart430566">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Cart" EntitySet="Cart" />
+          </AssociationSet>
+          <AssociationSet Name="FKCartDetail230590" Association="Self.FKCartDetail230590">
+            <End Role="Cart" EntitySet="Cart" />
+            <End Role="CartDetail" EntitySet="CartDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FKCartDetail61725" Association="Self.FKCartDetail61725">
+            <End Role="GameDetail" EntitySet="GameDetail" />
+            <End Role="CartDetail" EntitySet="CartDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FKCreditCard118197" Association="Self.FKCreditCard118197">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="CreditCard" EntitySet="CreditCard" />
+          </AssociationSet>
+          <AssociationSet Name="FKEvent184491" Association="Self.FKEvent184491">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Event" EntitySet="Event" />
+          </AssociationSet>
+          <AssociationSet Name="FKFriendList782661" Association="Self.FKFriendList782661">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="FriendList" EntitySet="FriendList" />
+          </AssociationSet>
+          <AssociationSet Name="FKFriendList967807" Association="Self.FKFriendList967807">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="FriendList" EntitySet="FriendList" />
+          </AssociationSet>
+          <AssociationSet Name="FKGameDetail308055" Association="Self.FKGameDetail308055">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameDetail" EntitySet="GameDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FKGameGenre255067" Association="Self.FKGameGenre255067">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameGenre" EntitySet="GameGenre" />
+          </AssociationSet>
+          <AssociationSet Name="FKGameGenre697924" Association="Self.FKGameGenre697924">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="GameGenre" EntitySet="GameGenre" />
+          </AssociationSet>
+          <AssociationSet Name="FKGamePlatfo27557" Association="Self.FKGamePlatfo27557">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GamePlatform" EntitySet="GamePlatform" />
+          </AssociationSet>
+          <AssociationSet Name="FKGamePlatfo724172" Association="Self.FKGamePlatfo724172">
+            <End Role="Platform" EntitySet="Platform" />
+            <End Role="GamePlatform" EntitySet="GamePlatform" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrder69678" Association="Self.FKOrder69678">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderDetai440612" Association="Self.FKOrderDetai440612">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderDetai855206" Association="Self.FKOrderDetai855206">
+            <End Role="GameDetail" EntitySet="GameDetail" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonAddr442952" Association="Self.FKPersonAddr442952">
+            <End Role="Address" EntitySet="Address" />
+            <End Role="PersonAddress" EntitySet="PersonAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonAddr841306" Association="Self.FKPersonAddr841306">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="PersonAddress" EntitySet="PersonAddress" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonEven329650" Association="Self.FKPersonEven329650">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="PersonEvent" EntitySet="PersonEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonEven815614" Association="Self.FKPersonEven815614">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="PersonEvent" EntitySet="PersonEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGame219406" Association="Self.FKPersonGame219406">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="PersonGame" EntitySet="PersonGame" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGame479066" Association="Self.FKPersonGame479066">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="PersonGame" EntitySet="PersonGame" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGenr132513" Association="Self.FKPersonGenr132513">
+            <End Role="Genre" EntitySet="Genre" />
+            <End Role="PersonGenre" EntitySet="PersonGenre" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGenr164969" Association="Self.FKPersonGenr164969">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="PersonGenre" EntitySet="PersonGenre" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonPlat206424" Association="Self.FKPersonPlat206424">
+            <End Role="Platform" EntitySet="Platform" />
+            <End Role="PersonPlatform" EntitySet="PersonPlatform" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonPlat217814" Association="Self.FKPersonPlat217814">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="PersonPlatform" EntitySet="PersonPlatform" />
+          </AssociationSet>
+          <AssociationSet Name="FKReview775831" Association="Self.FKReview775831">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="Review" EntitySet="Review" />
+          </AssociationSet>
+          <AssociationSet Name="FKReview964507" Association="Self.FKReview964507">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Review" EntitySet="Review" />
+          </AssociationSet>
+          <AssociationSet Name="FKWishlist521291" Association="Self.FKWishlist521291">
+            <End Role="Person" EntitySet="Person" />
+            <End Role="Wishlist" EntitySet="Wishlist" />
+          </AssociationSet>
+          <AssociationSet Name="FKWishlist709959" Association="Self.FKWishlist709959">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="Wishlist" EntitySet="Wishlist" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CVGSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="userName" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="roleCode" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="loginAttempts" Type="Int32" Nullable="false" />
+          <Property Name="isLocked" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="Self.FKAccount188532" FromRole="Account" ToRole="Person" />
+          <NavigationProperty Name="Role" Relationship="Self.FKAccount300931" FromRole="Account" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="addressId" />
+          </Key>
+          <Property Name="addressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="postalCode" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provinceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Province" Relationship="Self.FKAddress356431" FromRole="Address" ToRole="Province" />
+          <NavigationProperty Name="PersonAddresses" Relationship="Self.FKPersonAddr442952" FromRole="Address" ToRole="PersonAddress" />
+        </EntityType>
+        <EntityType Name="CreditCard">
+          <Key>
+            <PropertyRef Name="creditCardId" />
+          </Key>
+          <Property Name="creditCardId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="number" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="expDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="creditCardType" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CVV" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="Self.FKCreditCard118197" FromRole="CreditCard" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="eventId" />
+          </Key>
+          <Property Name="eventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="endDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="regFee" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="venue" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="Self.FKEvent184491" FromRole="Event" ToRole="Person" />
+          <NavigationProperty Name="PersonEvents" Relationship="Self.FKPersonEven329650" FromRole="Event" ToRole="PersonEvent" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="gameId" />
+          </Key>
+          <Property Name="gameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="relDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cover" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="publisher" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rateAVG" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="GameDetails" Relationship="CVGSModel.FKGameDetail308055" FromRole="Game" ToRole="GameDetail" />
+          <NavigationProperty Name="GameGenres" Relationship="CVGSModel.FKGameGenre255067" FromRole="Game" ToRole="GameGenre" />
+          <NavigationProperty Name="GamePlatforms" Relationship="CVGSModel.FKGamePlatfo27557" FromRole="Game" ToRole="GamePlatform" />
+          <NavigationProperty Name="PersonGames" Relationship="CVGSModel.FKPersonGame479066" FromRole="Game" ToRole="PersonGame" />
+          <NavigationProperty Name="Reviews" Relationship="CVGSModel.FKReview775831" FromRole="Game" ToRole="Review" />
+          <NavigationProperty Name="Wishlists" Relationship="CVGSModel.FKWishlist709959" FromRole="Game" ToRole="Wishlist" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="lName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dob" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="acceptEmails" Type="Boolean" Nullable="false" />
+          <Property Name="regDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Account" Relationship="Self.FKAccount188532" FromRole="Person" ToRole="Account" />
+          <NavigationProperty Name="CreditCards" Relationship="Self.FKCreditCard118197" FromRole="Person" ToRole="CreditCard" />
+          <NavigationProperty Name="Events" Relationship="Self.FKEvent184491" FromRole="Person" ToRole="Event" />
+          <NavigationProperty Name="PersonAddresses" Relationship="Self.FKPersonAddr841306" FromRole="Person" ToRole="PersonAddress" />
+          <NavigationProperty Name="PersonEvents" Relationship="Self.FKPersonEven815614" FromRole="Person" ToRole="PersonEvent" />
+          <NavigationProperty Name="FriendLists" Relationship="CVGSModel.FKFriendList782661" FromRole="Person" ToRole="FriendList" />
+          <NavigationProperty Name="FriendLists1" Relationship="CVGSModel.FKFriendList967807" FromRole="Person" ToRole="FriendList" />
+          <NavigationProperty Name="PersonGenres" Relationship="CVGSModel.FKPersonGenr164969" FromRole="Person" ToRole="PersonGenre" />
+          <NavigationProperty Name="PersonPlatforms" Relationship="CVGSModel.FKPersonPlat217814" FromRole="Person" ToRole="PersonPlatform" />
+          <NavigationProperty Name="PersonGames" Relationship="CVGSModel.FKPersonGame219406" FromRole="Person" ToRole="PersonGame" />
+          <NavigationProperty Name="Reviews" Relationship="CVGSModel.FKReview964507" FromRole="Person" ToRole="Review" />
+          <NavigationProperty Name="Wishlists" Relationship="CVGSModel.FKWishlist521291" FromRole="Person" ToRole="Wishlist" />
+          <NavigationProperty Name="Cart" Relationship="CVGSModel.FKCart430566" FromRole="Person" ToRole="Cart" />
+          <NavigationProperty Name="Orders" Relationship="CVGSModel.FKOrder69678" FromRole="Person" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="PersonAddress">
+          <Key>
+            <PropertyRef Name="personAddressId" />
+          </Key>
+          <Property Name="personAddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="addressId" Type="Int32" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Address" Relationship="Self.FKPersonAddr442952" FromRole="PersonAddress" ToRole="Address" />
+          <NavigationProperty Name="Person" Relationship="Self.FKPersonAddr841306" FromRole="PersonAddress" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="PersonEvent">
+          <Key>
+            <PropertyRef Name="personEventId" />
+          </Key>
+          <Property Name="personEventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="eventId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Event" Relationship="Self.FKPersonEven329650" FromRole="PersonEvent" ToRole="Event" />
+          <NavigationProperty Name="Person" Relationship="Self.FKPersonEven815614" FromRole="PersonEvent" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Province">
+          <Key>
+            <PropertyRef Name="provinceCode" />
+          </Key>
+          <Property Name="provinceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="provTax" Type="Decimal" Precision="3" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Addresses" Relationship="Self.FKAddress356431" FromRole="Province" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="roleCode" />
+          </Key>
+          <Property Name="roleCode" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="disPct" Type="Decimal" Precision="3" Scale="2" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FKAccount300931" FromRole="Role" ToRole="Account" />
+        </EntityType>
+        <Association Name="FKAccount188532">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKAccount300931">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="roleCode" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="roleCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKAddress356431">
+          <End Role="Province" Type="Self.Province" Multiplicity="1" />
+          <End Role="Address" Type="Self.Address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Province">
+              <PropertyRef Name="provinceCode" />
+            </Principal>
+            <Dependent Role="Address">
+              <PropertyRef Name="provinceCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonAddr442952">
+          <End Role="Address" Type="Self.Address" Multiplicity="1" />
+          <End Role="PersonAddress" Type="Self.PersonAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Address">
+              <PropertyRef Name="addressId" />
+            </Principal>
+            <Dependent Role="PersonAddress">
+              <PropertyRef Name="addressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCreditCard118197">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="CreditCard" Type="Self.CreditCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="CreditCard">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKEvent184491">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="Event" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Event">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonEven329650">
+          <End Role="Event" Type="Self.Event" Multiplicity="1" />
+          <End Role="PersonEvent" Type="Self.PersonEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="eventId" />
+            </Principal>
+            <Dependent Role="PersonEvent">
+              <PropertyRef Name="eventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonAddr841306">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonAddress" Type="Self.PersonAddress" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonAddress">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonEven815614">
+          <End Role="Person" Type="Self.Person" Multiplicity="1" />
+          <End Role="PersonEvent" Type="Self.PersonEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonEvent">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CVGSContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Account" />
+          <EntitySet Name="Addresses" EntityType="Self.Address" />
+          <EntitySet Name="CreditCards" EntityType="Self.CreditCard" />
+          <EntitySet Name="Events" EntityType="Self.Event" />
+          <EntitySet Name="Games" EntityType="Self.Game" />
+          <EntitySet Name="People" EntityType="Self.Person" />
+          <EntitySet Name="PersonAddresses" EntityType="Self.PersonAddress" />
+          <EntitySet Name="PersonEvents" EntityType="Self.PersonEvent" />
+          <EntitySet Name="Provinces" EntityType="Self.Province" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <AssociationSet Name="FKAccount188532" Association="Self.FKAccount188532">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FKAccount300931" Association="Self.FKAccount300931">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="Account" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FKAddress356431" Association="Self.FKAddress356431">
+            <End Role="Province" EntitySet="Provinces" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonAddr442952" Association="Self.FKPersonAddr442952">
+            <End Role="Address" EntitySet="Addresses" />
+            <End Role="PersonAddress" EntitySet="PersonAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FKCreditCard118197" Association="Self.FKCreditCard118197">
+            <End Role="Person" EntitySet="People" />
+            <End Role="CreditCard" EntitySet="CreditCards" />
+          </AssociationSet>
+          <AssociationSet Name="FKEvent184491" Association="Self.FKEvent184491">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Event" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonEven329650" Association="Self.FKPersonEven329650">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="PersonEvent" EntitySet="PersonEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonAddr841306" Association="Self.FKPersonAddr841306">
+            <End Role="Person" EntitySet="People" />
+            <End Role="PersonAddress" EntitySet="PersonAddresses" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonEven815614" Association="Self.FKPersonEven815614">
+            <End Role="Person" EntitySet="People" />
+            <End Role="PersonEvent" EntitySet="PersonEvents" />
+          </AssociationSet>
+          <EntitySet Name="FriendLists" EntityType="CVGSModel.FriendList" />
+          <AssociationSet Name="FKFriendList782661" Association="CVGSModel.FKFriendList782661">
+            <End Role="Person" EntitySet="People" />
+            <End Role="FriendList" EntitySet="FriendLists" />
+          </AssociationSet>
+          <AssociationSet Name="FKFriendList967807" Association="CVGSModel.FKFriendList967807">
+            <End Role="Person" EntitySet="People" />
+            <End Role="FriendList" EntitySet="FriendLists" />
+          </AssociationSet>
+          <EntitySet Name="Genres" EntityType="CVGSModel.Genre" />
+          <EntitySet Name="PersonGenres" EntityType="CVGSModel.PersonGenre" />
+          <EntitySet Name="PersonPlatforms" EntityType="CVGSModel.PersonPlatform" />
+          <EntitySet Name="Platforms" EntityType="CVGSModel.Platform" />
+          <AssociationSet Name="FKPersonGenr132513" Association="CVGSModel.FKPersonGenr132513">
+            <End Role="Genre" EntitySet="Genres" />
+            <End Role="PersonGenre" EntitySet="PersonGenres" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGenr164969" Association="CVGSModel.FKPersonGenr164969">
+            <End Role="Person" EntitySet="People" />
+            <End Role="PersonGenre" EntitySet="PersonGenres" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonPlat217814" Association="CVGSModel.FKPersonPlat217814">
+            <End Role="Person" EntitySet="People" />
+            <End Role="PersonPlatform" EntitySet="PersonPlatforms" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonPlat206424" Association="CVGSModel.FKPersonPlat206424">
+            <End Role="Platform" EntitySet="Platforms" />
+            <End Role="PersonPlatform" EntitySet="PersonPlatforms" />
+          </AssociationSet>
+          <EntitySet Name="GameDetails" EntityType="CVGSModel.GameDetail" />
+          <EntitySet Name="GameGenres" EntityType="CVGSModel.GameGenre" />
+          <EntitySet Name="GamePlatforms" EntityType="CVGSModel.GamePlatform" />
+          <EntitySet Name="PersonGames" EntityType="CVGSModel.PersonGame" />
+          <AssociationSet Name="FKGameDetail308055" Association="CVGSModel.FKGameDetail308055">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameDetail" EntitySet="GameDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FKGameGenre255067" Association="CVGSModel.FKGameGenre255067">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameGenre" EntitySet="GameGenres" />
+          </AssociationSet>
+          <AssociationSet Name="FKGamePlatfo27557" Association="CVGSModel.FKGamePlatfo27557">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GamePlatform" EntitySet="GamePlatforms" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGame479066" Association="CVGSModel.FKPersonGame479066">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="PersonGame" EntitySet="PersonGames" />
+          </AssociationSet>
+          <AssociationSet Name="FKGameGenre697924" Association="CVGSModel.FKGameGenre697924">
+            <End Role="Genre" EntitySet="Genres" />
+            <End Role="GameGenre" EntitySet="GameGenres" />
+          </AssociationSet>
+          <AssociationSet Name="FKGamePlatfo724172" Association="CVGSModel.FKGamePlatfo724172">
+            <End Role="Platform" EntitySet="Platforms" />
+            <End Role="GamePlatform" EntitySet="GamePlatforms" />
+          </AssociationSet>
+          <AssociationSet Name="FKPersonGame219406" Association="CVGSModel.FKPersonGame219406">
+            <End Role="Person" EntitySet="People" />
+            <End Role="PersonGame" EntitySet="PersonGames" />
+          </AssociationSet>
+          <EntitySet Name="Reviews" EntityType="CVGSModel.Review" />
+          <EntitySet Name="Wishlists" EntityType="CVGSModel.Wishlist" />
+          <AssociationSet Name="FKReview775831" Association="CVGSModel.FKReview775831">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="Review" EntitySet="Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FKWishlist709959" Association="CVGSModel.FKWishlist709959">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="Wishlist" EntitySet="Wishlists" />
+          </AssociationSet>
+          <AssociationSet Name="FKReview964507" Association="CVGSModel.FKReview964507">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Review" EntitySet="Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FKWishlist521291" Association="CVGSModel.FKWishlist521291">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Wishlist" EntitySet="Wishlists" />
+          </AssociationSet>
+          <EntitySet Name="Carts" EntityType="CVGSModel.Cart" />
+          <EntitySet Name="CartDetails" EntityType="CVGSModel.CartDetail" />
+          <AssociationSet Name="FKCart430566" Association="CVGSModel.FKCart430566">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Cart" EntitySet="Carts" />
+          </AssociationSet>
+          <AssociationSet Name="FKCartDetail230590" Association="CVGSModel.FKCartDetail230590">
+            <End Role="Cart" EntitySet="Carts" />
+            <End Role="CartDetail" EntitySet="CartDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FKCartDetail61725" Association="CVGSModel.FKCartDetail61725">
+            <End Role="GameDetail" EntitySet="GameDetails" />
+            <End Role="CartDetail" EntitySet="CartDetails" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="CVGSModel.Order" />
+          <EntitySet Name="OrderDetails" EntityType="CVGSModel.OrderDetail" />
+          <AssociationSet Name="FKOrderDetai855206" Association="CVGSModel.FKOrderDetai855206">
+            <End Role="GameDetail" EntitySet="GameDetails" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrder69678" Association="CVGSModel.FKOrder69678">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FKOrderDetai440612" Association="CVGSModel.FKOrderDetai440612">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="FriendList">
+          <Key>
+            <PropertyRef Name="friendListId" />
+          </Key>
+          <Property Name="friendListId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="friendId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKFriendList782661" FromRole="FriendList" ToRole="Person" />
+          <NavigationProperty Name="Person1" Relationship="CVGSModel.FKFriendList967807" FromRole="FriendList" ToRole="Person" />
+        </EntityType>
+        <Association Name="FKFriendList782661">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.FriendList" Role="FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="friendId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKFriendList967807">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.FriendList" Role="FriendList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="FriendList">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="genreCode" />
+          </Key>
+          <Property Name="genreCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PersonGenres" Relationship="CVGSModel.FKPersonGenr132513" FromRole="Genre" ToRole="PersonGenre" />
+          <NavigationProperty Name="GameGenres" Relationship="CVGSModel.FKGameGenre697924" FromRole="Genre" ToRole="GameGenre" />
+        </EntityType>
+        <EntityType Name="PersonGenre">
+          <Key>
+            <PropertyRef Name="personGenreId" />
+          </Key>
+          <Property Name="personGenreId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="genreCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Genre" Relationship="CVGSModel.FKPersonGenr132513" FromRole="PersonGenre" ToRole="Genre" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKPersonGenr164969" FromRole="PersonGenre" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="PersonPlatform">
+          <Key>
+            <PropertyRef Name="personPlatformId" />
+          </Key>
+          <Property Name="personPlatformId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="platformCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKPersonPlat217814" FromRole="PersonPlatform" ToRole="Person" />
+          <NavigationProperty Name="Platform" Relationship="CVGSModel.FKPersonPlat206424" FromRole="PersonPlatform" ToRole="Platform" />
+        </EntityType>
+        <EntityType Name="Platform">
+          <Key>
+            <PropertyRef Name="platformCode" />
+          </Key>
+          <Property Name="platformCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PersonPlatforms" Relationship="CVGSModel.FKPersonPlat206424" FromRole="Platform" ToRole="PersonPlatform" />
+          <NavigationProperty Name="GamePlatforms" Relationship="CVGSModel.FKGamePlatfo724172" FromRole="Platform" ToRole="GamePlatform" />
+        </EntityType>
+        <Association Name="FKPersonGenr132513">
+          <End Type="CVGSModel.Genre" Role="Genre" Multiplicity="1" />
+          <End Type="CVGSModel.PersonGenre" Role="PersonGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="genreCode" />
+            </Principal>
+            <Dependent Role="PersonGenre">
+              <PropertyRef Name="genreCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGenr164969">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.PersonGenre" Role="PersonGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonGenre">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonPlat217814">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.PersonPlatform" Role="PersonPlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonPlatform">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonPlat206424">
+          <End Type="CVGSModel.Platform" Role="Platform" Multiplicity="1" />
+          <End Type="CVGSModel.PersonPlatform" Role="PersonPlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="platformCode" />
+            </Principal>
+            <Dependent Role="PersonPlatform">
+              <PropertyRef Name="platformCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="GameDetail">
+          <Key>
+            <PropertyRef Name="gameDetailId" />
+          </Key>
+          <Property Name="gameDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gameId" Type="Int32" Nullable="false" />
+          <Property Name="phyCopy" Type="Boolean" Nullable="false" />
+          <Property Name="price" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <Property Name="qoh" Type="Int32" />
+          <NavigationProperty Name="Game" Relationship="CVGSModel.FKGameDetail308055" FromRole="GameDetail" ToRole="Game" />
+          <NavigationProperty Name="CartDetails" Relationship="CVGSModel.FKCartDetail61725" FromRole="GameDetail" ToRole="CartDetail" />
+          <NavigationProperty Name="OrderDetails" Relationship="CVGSModel.FKOrderDetai855206" FromRole="GameDetail" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="GameGenre">
+          <Key>
+            <PropertyRef Name="gameGenreId" />
+          </Key>
+          <Property Name="gameGenreId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gameId" Type="Int32" Nullable="false" />
+          <Property Name="genreCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Game" Relationship="CVGSModel.FKGameGenre255067" FromRole="GameGenre" ToRole="Game" />
+          <NavigationProperty Name="Genre" Relationship="CVGSModel.FKGameGenre697924" FromRole="GameGenre" ToRole="Genre" />
+        </EntityType>
+        <EntityType Name="GamePlatform">
+          <Key>
+            <PropertyRef Name="gamePlatformId" />
+          </Key>
+          <Property Name="gamePlatformId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gameId" Type="Int32" Nullable="false" />
+          <Property Name="platformCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Game" Relationship="CVGSModel.FKGamePlatfo27557" FromRole="GamePlatform" ToRole="Game" />
+          <NavigationProperty Name="Platform" Relationship="CVGSModel.FKGamePlatfo724172" FromRole="GamePlatform" ToRole="Platform" />
+        </EntityType>
+        <EntityType Name="PersonGame">
+          <Key>
+            <PropertyRef Name="personGameId" />
+          </Key>
+          <Property Name="personGameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="gameId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="CVGSModel.FKPersonGame479066" FromRole="PersonGame" ToRole="Game" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKPersonGame219406" FromRole="PersonGame" ToRole="Person" />
+        </EntityType>
+        <Association Name="FKGameDetail308055">
+          <End Type="CVGSModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="CVGSModel.GameDetail" Role="GameDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="GameDetail">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGameGenre255067">
+          <End Type="CVGSModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="CVGSModel.GameGenre" Role="GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGamePlatfo27557">
+          <End Type="CVGSModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="CVGSModel.GamePlatform" Role="GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGame479066">
+          <End Type="CVGSModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="CVGSModel.PersonGame" Role="PersonGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="PersonGame">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGameGenre697924">
+          <End Type="CVGSModel.Genre" Role="Genre" Multiplicity="1" />
+          <End Type="CVGSModel.GameGenre" Role="GameGenre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Genre">
+              <PropertyRef Name="genreCode" />
+            </Principal>
+            <Dependent Role="GameGenre">
+              <PropertyRef Name="genreCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKGamePlatfo724172">
+          <End Type="CVGSModel.Platform" Role="Platform" Multiplicity="1" />
+          <End Type="CVGSModel.GamePlatform" Role="GamePlatform" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Platform">
+              <PropertyRef Name="platformCode" />
+            </Principal>
+            <Dependent Role="GamePlatform">
+              <PropertyRef Name="platformCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKPersonGame219406">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.PersonGame" Role="PersonGame" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="PersonGame">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="reviewId" />
+          </Key>
+          <Property Name="reviewId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="gameId" Type="Int32" Nullable="false" />
+          <Property Name="rating" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="revDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="revComment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Game" Relationship="CVGSModel.FKReview775831" FromRole="Review" ToRole="Game" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKReview964507" FromRole="Review" ToRole="Person" />
+        </EntityType>
+        <EntityType Name="Wishlist">
+          <Key>
+            <PropertyRef Name="wishlistId" />
+          </Key>
+          <Property Name="wishlistId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="gameId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Game" Relationship="CVGSModel.FKWishlist709959" FromRole="Wishlist" ToRole="Game" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKWishlist521291" FromRole="Wishlist" ToRole="Person" />
+        </EntityType>
+        <Association Name="FKReview775831">
+          <End Type="CVGSModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="CVGSModel.Review" Role="Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWishlist709959">
+          <End Type="CVGSModel.Game" Role="Game" Multiplicity="1" />
+          <End Type="CVGSModel.Wishlist" Role="Wishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="gameId" />
+            </Principal>
+            <Dependent Role="Wishlist">
+              <PropertyRef Name="gameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKReview964507">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.Review" Role="Review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Review">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKWishlist521291">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.Wishlist" Role="Wishlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Wishlist">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="total" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKCart430566" FromRole="Cart" ToRole="Person" />
+          <NavigationProperty Name="CartDetails" Relationship="CVGSModel.FKCartDetail230590" FromRole="Cart" ToRole="CartDetail" />
+        </EntityType>
+        <EntityType Name="CartDetail">
+          <Key>
+            <PropertyRef Name="cartDetailId" />
+          </Key>
+          <Property Name="cartDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="gameDetaild" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cart" Relationship="CVGSModel.FKCartDetail230590" FromRole="CartDetail" ToRole="Cart" />
+          <NavigationProperty Name="GameDetail" Relationship="CVGSModel.FKCartDetail61725" FromRole="CartDetail" ToRole="GameDetail" />
+        </EntityType>
+        <Association Name="FKCart430566">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.Cart" Role="Cart" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCartDetail230590">
+          <End Type="CVGSModel.Cart" Role="Cart" Multiplicity="1" />
+          <End Type="CVGSModel.CartDetail" Role="CartDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cart">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="CartDetail">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKCartDetail61725">
+          <End Type="CVGSModel.GameDetail" Role="GameDetail" Multiplicity="1" />
+          <End Type="CVGSModel.CartDetail" Role="CartDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GameDetail">
+              <PropertyRef Name="gameDetailId" />
+            </Principal>
+            <Dependent Role="CartDetail">
+              <PropertyRef Name="gameDetaild" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="orderId" />
+          </Key>
+          <Property Name="orderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="ordDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="total" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <NavigationProperty Name="Person" Relationship="CVGSModel.FKOrder69678" FromRole="Order" ToRole="Person" />
+          <NavigationProperty Name="OrderDetails" Relationship="CVGSModel.FKOrderDetai440612" FromRole="Order" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="orderDetailId" />
+          </Key>
+          <Property Name="orderDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderId" Type="Int32" Nullable="false" />
+          <Property Name="gameDetailId" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="uPrice" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
+          <NavigationProperty Name="GameDetail" Relationship="CVGSModel.FKOrderDetai855206" FromRole="OrderDetail" ToRole="GameDetail" />
+          <NavigationProperty Name="Order" Relationship="CVGSModel.FKOrderDetai440612" FromRole="OrderDetail" ToRole="Order" />
+        </EntityType>
+        <Association Name="FKOrderDetai855206">
+          <End Type="CVGSModel.GameDetail" Role="GameDetail" Multiplicity="1" />
+          <End Type="CVGSModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GameDetail">
+              <PropertyRef Name="gameDetailId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="gameDetailId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrder69678">
+          <End Type="CVGSModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="CVGSModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="personId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="personId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FKOrderDetai440612">
+          <End Type="CVGSModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="CVGSModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="orderId" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="orderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CVGSModelStoreContainer" CdmEntityContainer="CVGSContext">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="CVGSModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+                <ScalarProperty Name="loginAttempts" ColumnName="loginAttempts" />
+                <ScalarProperty Name="isLocked" ColumnName="isLocked" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Addresses">
+            <EntityTypeMapping TypeName="CVGSModel.Address">
+              <MappingFragment StoreEntitySet="Address">
+                <ScalarProperty Name="addressId" ColumnName="addressId" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+                <ScalarProperty Name="provinceCode" ColumnName="provinceCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CreditCards">
+            <EntityTypeMapping TypeName="CVGSModel.CreditCard">
+              <MappingFragment StoreEntitySet="CreditCard">
+                <ScalarProperty Name="creditCardId" ColumnName="creditCardId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="number" ColumnName="number" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="expDate" ColumnName="expDate" />
+                <ScalarProperty Name="creditCardType" ColumnName="creditCardType" />
+                <ScalarProperty Name="CVV" ColumnName="CVV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="CVGSModel.Event">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="eventId" ColumnName="eventId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="endDate" ColumnName="endDate" />
+                <ScalarProperty Name="regFee" ColumnName="regFee" />
+                <ScalarProperty Name="venue" ColumnName="venue" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Games">
+            <EntityTypeMapping TypeName="CVGSModel.Game">
+              <MappingFragment StoreEntitySet="Game">
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="relDate" ColumnName="relDate" />
+                <ScalarProperty Name="desc" ColumnName="desc" />
+                <ScalarProperty Name="cover" ColumnName="cover" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="rateAVG" ColumnName="rateAVG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="CVGSModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="fName" ColumnName="fName" />
+                <ScalarProperty Name="mName" ColumnName="mName" />
+                <ScalarProperty Name="lName" ColumnName="lName" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="acceptEmails" ColumnName="acceptEmails" />
+                <ScalarProperty Name="regDate" ColumnName="regDate" />
+                <ScalarProperty Name="avatar" ColumnName="avatar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonAddresses">
+            <EntityTypeMapping TypeName="CVGSModel.PersonAddress">
+              <MappingFragment StoreEntitySet="PersonAddress">
+                <ScalarProperty Name="personAddressId" ColumnName="personAddressId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="addressId" ColumnName="addressId" />
+                <ScalarProperty Name="type" ColumnName="type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonEvents">
+            <EntityTypeMapping TypeName="CVGSModel.PersonEvent">
+              <MappingFragment StoreEntitySet="PersonEvent">
+                <ScalarProperty Name="personEventId" ColumnName="personEventId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="eventId" ColumnName="eventId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provinces">
+            <EntityTypeMapping TypeName="CVGSModel.Province">
+              <MappingFragment StoreEntitySet="Province">
+                <ScalarProperty Name="provinceCode" ColumnName="provinceCode" />
+                <ScalarProperty Name="provTax" ColumnName="provTax" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="CVGSModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+                <ScalarProperty Name="disPct" ColumnName="disPct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FriendLists">
+            <EntityTypeMapping TypeName="CVGSModel.FriendList">
+              <MappingFragment StoreEntitySet="FriendList">
+                <ScalarProperty Name="friendId" ColumnName="friendId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="friendListId" ColumnName="friendListId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Genres">
+            <EntityTypeMapping TypeName="CVGSModel.Genre">
+              <MappingFragment StoreEntitySet="Genre">
+                <ScalarProperty Name="genreCode" ColumnName="genreCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonGenres">
+            <EntityTypeMapping TypeName="CVGSModel.PersonGenre">
+              <MappingFragment StoreEntitySet="PersonGenre">
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="genreCode" ColumnName="genreCode" />
+                <ScalarProperty Name="personGenreId" ColumnName="personGenreId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonPlatforms">
+            <EntityTypeMapping TypeName="CVGSModel.PersonPlatform">
+              <MappingFragment StoreEntitySet="PersonPlatform">
+                <ScalarProperty Name="platformCode" ColumnName="platformCode" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="personPlatformId" ColumnName="personPlatformId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Platforms">
+            <EntityTypeMapping TypeName="CVGSModel.Platform">
+              <MappingFragment StoreEntitySet="Platform">
+                <ScalarProperty Name="platformCode" ColumnName="platformCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameDetails">
+            <EntityTypeMapping TypeName="CVGSModel.GameDetail">
+              <MappingFragment StoreEntitySet="GameDetail">
+                <ScalarProperty Name="qoh" ColumnName="qoh" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="phyCopy" ColumnName="phyCopy" />
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="gameDetailId" ColumnName="gameDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameGenres">
+            <EntityTypeMapping TypeName="CVGSModel.GameGenre">
+              <MappingFragment StoreEntitySet="GameGenre">
+                <ScalarProperty Name="genreCode" ColumnName="genreCode" />
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="gameGenreId" ColumnName="gameGenreId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GamePlatforms">
+            <EntityTypeMapping TypeName="CVGSModel.GamePlatform">
+              <MappingFragment StoreEntitySet="GamePlatform">
+                <ScalarProperty Name="platformCode" ColumnName="platformCode" />
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="gamePlatformId" ColumnName="gamePlatformId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonGames">
+            <EntityTypeMapping TypeName="CVGSModel.PersonGame">
+              <MappingFragment StoreEntitySet="PersonGame">
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="personGameId" ColumnName="personGameId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="CVGSModel.Review">
+              <MappingFragment StoreEntitySet="Review">
+                <ScalarProperty Name="revComment" ColumnName="revComment" />
+                <ScalarProperty Name="revDate" ColumnName="revDate" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="reviewId" ColumnName="reviewId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wishlists">
+            <EntityTypeMapping TypeName="CVGSModel.Wishlist">
+              <MappingFragment StoreEntitySet="Wishlist">
+                <ScalarProperty Name="gameId" ColumnName="gameId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="wishlistId" ColumnName="wishlistId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Carts">
+            <EntityTypeMapping TypeName="CVGSModel.Cart">
+              <MappingFragment StoreEntitySet="Cart">
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CartDetails">
+            <EntityTypeMapping TypeName="CVGSModel.CartDetail">
+              <MappingFragment StoreEntitySet="CartDetail">
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="gameDetaild" ColumnName="gameDetaild" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="cartDetailId" ColumnName="cartDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="CVGSModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="ordDate" ColumnName="ordDate" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="orderId" ColumnName="orderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="CVGSModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="uPrice" ColumnName="uPrice" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="gameDetailId" ColumnName="gameDetailId" />
+                <ScalarProperty Name="orderId" ColumnName="orderId" />
+                <ScalarProperty Name="orderDetailId" ColumnName="orderDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

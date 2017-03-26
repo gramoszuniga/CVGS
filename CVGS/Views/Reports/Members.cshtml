@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CVGS.Models.Person>
+
+@{
+    ViewBag.Title = "List of Members Reports";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            User Name
+        </th>
+        <th>
+            Full Name
+        </th>
+        <th>
+            E-Mail
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Registration Date
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.personId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account.userName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fName) @Html.DisplayFor(modelItem => item.lName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.ValueFor(modelItem => item.regDate, "{0:MM/dd/yyyy}")
+            </td>
+        </tr>
+    }
+</table>

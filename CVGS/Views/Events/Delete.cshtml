@@ -1,0 +1,78 @@
+﻿@model CVGS.Models.Event
+
+@{
+    ViewBag.Title = "Delete " + Model.title + "?";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Event Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            Start Date
+        </dt>
+
+        <dd>
+            @Html.ValueFor(model => model.startDate, "{0:MM/dd/yyyy hh:mm tt}")
+        </dd>
+
+        <dt>
+            End Date
+        </dt>
+
+        <dd>
+            @Html.ValueFor(model => model.endDate, "{0:MM/dd/yyyy hh:mm tt}")
+        </dd>
+
+        <dt>
+           Registration Fee
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regFee)
+        </dd>
+
+        <dt>
+            Venue
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.venue)
+        </dd>
+
+        <dt>
+            Event Notes
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+
+        <dt>
+            Event Contact
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.fName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> | <span>@TempData["errMsg"]</span>
+            @Html.ActionLink("Back to Events", "Index")
+        </div>
+    }
+</div>

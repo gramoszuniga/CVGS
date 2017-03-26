@@ -1,0 +1,80 @@
+﻿@model CVGS.ViewModels.GameAndGameDetails
+
+@{
+    ViewBag.Title = "Game Report for " + Model.title;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.gameId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.relDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rateAVG)
+        </th>
+        <th>
+            Physical Price
+        </th>
+        <th>
+            Downloadable Price
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qoh)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.gameId)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.title)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.publisher)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.relDate)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.rateAVG)
+        </td>
+        <td>
+            @ViewBag.phyPrice
+        </td>
+        <td>
+            @ViewBag.downPrice
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.qoh)
+        </td>
+    </tr>
+</table>
+<table class="table">
+    <tr>
+        <th>
+            Downloads
+        </th>
+        <th>
+            Buys
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @ViewBag.downloads
+        </td>
+        <td>
+            @ViewBag.buys
+        </td>
+    </tr>
+</table>
